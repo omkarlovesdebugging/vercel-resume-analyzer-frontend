@@ -7,7 +7,7 @@ export default async function handler(req, res) {
 
   try {
     // We'll use a base URL environment variable to be cleaner
-    const baseUrl = process.env.BACKEND_API_BASE || 'http://backend:8000/score-resume';
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
     const backendUrl = `${baseUrl}/summarize`;
 
     const r = await fetch(backendUrl, {
