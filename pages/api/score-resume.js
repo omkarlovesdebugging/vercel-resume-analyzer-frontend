@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const backendUrl = process.env.BACKEND_URL || 'http://backend:8000/score-resume'
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
     const r = await fetch(backendUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
